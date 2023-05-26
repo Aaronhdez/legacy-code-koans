@@ -2,8 +2,7 @@ using System;
 
 namespace LegacyCodeKoans.Singleton
 {
-    public class Dependency
-    {
+    public class Dependency : IDependency {
         public static readonly Dependency Instance = new Dependency();
 
         public void SomeSideEffect()
