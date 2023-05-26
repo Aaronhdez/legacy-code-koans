@@ -2,9 +2,13 @@ namespace LegacyCodeKoans.StaticMethod
 {
     public class Service
     {
-        public void DoSomething()
-        {
-            Dependency.SomeSideEffect();
+        private readonly IDependencyWrapper _wrapper;
+        public Service(IDependencyWrapper wrapper) {
+            _wrapper = wrapper;
+        }
+
+        public void DoSomething() {
+            _wrapper.SomeSideEffect();
         }
     }
 }
