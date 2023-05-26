@@ -2,9 +2,9 @@ namespace LegacyCodeKoans.Singleton
 {
     public class Service
     {
-        private readonly Dependency _dependency;
+        private readonly IDependency _dependency;
 
-        public Service(Dependency dependency) {
+        public Service(IDependency dependency) {
             _dependency = dependency;
         }
 

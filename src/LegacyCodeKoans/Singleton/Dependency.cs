@@ -3,7 +3,7 @@ using System;
 namespace LegacyCodeKoans.Singleton
 {
     public class Dependency : IDependency {
-        public static readonly Dependency Instance = new Dependency();
+        public static readonly IDependency Instance = new Dependency();
 
         public void SomeSideEffect()
         {
