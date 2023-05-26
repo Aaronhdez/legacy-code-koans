@@ -1,3 +1,4 @@
+using NSubstitute;
 using Xunit;
 
 namespace LegacyCodeKoans.StaticMethod
@@ -7,7 +8,8 @@ namespace LegacyCodeKoans.StaticMethod
         [Fact]
         public void DoSomething()
         {
-            var service = new Service(new DependencyWrapper());
+            var dependencyWrapper = Substitute.For<IDependencyWrapper>();
+            var service = new Service(dependencyWrapper);
             service.DoSomething();
 
             // TODO: Assert Dependency.SomeSideEffect() method was called
