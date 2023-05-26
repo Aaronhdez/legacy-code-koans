@@ -2,9 +2,14 @@ namespace LegacyCodeKoans.Singleton
 {
     public class Service
     {
-        public void DoSomething()
-        {
-            Dependency.Instance.SomeSideEffect();
+        private readonly Dependency _dependency;
+
+        public Service() {
+            _dependency = Dependency.Instance;
+        }
+
+        public void DoSomething() {
+            _dependency.SomeSideEffect();
         }
     }
 }
