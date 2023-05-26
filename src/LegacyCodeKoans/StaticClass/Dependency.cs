@@ -2,7 +2,7 @@ using System;
 
 namespace LegacyCodeKoans.StaticClass
 {
-    public static class Dependency
+    public static class Dependency 
     {
         public static void SomeSideEffect()
         {
