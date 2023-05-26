@@ -7,7 +7,7 @@ namespace LegacyCodeKoans.Hardwired
         [Fact]
         public void DoSomething()
         {
-            var service = new Service();
+            var service = new Service(new Dependency());
             service.DoSomething();
 
             // TODO: Assert Dependency.SomeSideEffect() method was called
