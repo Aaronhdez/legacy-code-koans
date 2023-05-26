@@ -4,8 +4,8 @@ namespace LegacyCodeKoans.Singleton
     {
         private readonly Dependency _dependency;
 
-        public Service() {
-            _dependency = Dependency.Instance;
+        public Service(Dependency dependency) {
+            _dependency = dependency;
         }
 
         public void DoSomething() {

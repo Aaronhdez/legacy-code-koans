@@ -7,7 +7,7 @@ namespace LegacyCodeKoans.Singleton
         [Fact]
         public void DoSomething()
         {
-            var service = new Service();
+            var service = new Service(Dependency.Instance);
             service.DoSomething();
             
             // TODO: Assert Dependency.SomeSideEffect() method was called
